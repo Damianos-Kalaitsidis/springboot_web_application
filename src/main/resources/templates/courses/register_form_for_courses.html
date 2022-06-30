@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<title>Register Course Data</title>
+
+</head>
+	<body>
+		<div class="container">
+		    <h1>Course Registration</h1>
+		    <br>
+		    <br>
+		    <hr>
+		    <p class="h4 mb-4">Save Course </p>
+			<form action="#" th:action="@{/courses/save}" th:object="${course}"method="post">
+		        <label class="form-label">ID:</label>
+		        <input type="text" class="form-control mb-4 col-4" th:field = "*{id}" /><br/>
+		 		
+		        <label class="form-label">Name:</label>
+		        <input type="text" class="form-control mb-4 col-4" th:field = "*{name}" /><br/>
+		 		
+		 		<label class="form-label">Year (yyyy-mm-dd):</label>
+		        <input type="text"  class="form-control mb-4 col-4" th:field = "*{Year}" /><br/>
+		 		
+		 		<label class="form-label">Semester :</label>
+		        <input type="text"  class="form-control mb-4 col-4" th:field = "*{Semester}" /><br/>
+		 		
+		        <label class="form-label">Syllabus:</label>
+		        <input type="text" class="form-control mb-4 col-4" th:field = "*{Syllabus}" /><br/>
+				
+				<label class="form-label">Exam weight:</label>
+			    <input type="text" class="form-control mb-4 col-4" th:field = "*{Exam}" /><br/>
+			 		
+			 	<label class="form-label">Project weight:</label>
+			    <input type="text" class="form-control mb-4 col-4" th:field = "*{Project}" /><br/>
+				<br/>
+		        <button class="btn btn-primary" type="submit"onsubmit="return validateForm()">Register</button>    
+		    </form>
+		</div>
+	</body>
+</html>
